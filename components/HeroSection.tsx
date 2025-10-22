@@ -19,16 +19,21 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Top Left - "Ame" Logo */}
+      {/* Top Left - "Ame" Logo Image */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="absolute top-8 left-8 md:top-12 md:left-12 z-10"
+        className="absolute top-8 left-8 md:top-12 md:left-12 z-10 w-20 h-8 md:w-28 md:h-11"
       >
-        <h1 className="text-white text-3xl md:text-4xl font-light tracking-wider">
-          Ame
-        </h1>
+        <Image
+          src="/images/ame.png"
+          alt="Ame Interior Design"
+          fill
+          className="object-contain"
+          sizes="(max-width: 768px) 80px, 112px"
+          priority
+        />
       </motion.div>
 
       {/* Bottom Right - Large "A" Watermark Image */}
