@@ -31,16 +31,20 @@ export default function HeroSection() {
         </h1>
       </motion.div>
 
-      {/* Bottom Right - Large "A" Watermark */}
+      {/* Bottom Right - Large "A" Watermark Image */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.5, delay: 0.8 }}
-        className="absolute bottom-8 right-8 md:bottom-16 md:right-16 z-10"
+        className="absolute bottom-0 right-0 md:bottom-8 md:right-8 z-10 w-64 h-64 md:w-96 md:h-96 lg:w-[32rem] lg:h-[32rem]"
       >
-        <h2 className="text-white/30 text-[12rem] md:text-[20rem] lg:text-[25rem] font-light leading-none">
-          A
-        </h2>
+        <Image
+          src="/images/A.png"
+          alt="Ame Logo"
+          fill
+          className="object-contain opacity-30"
+          sizes="(max-width: 768px) 256px, (max-width: 1024px) 384px, 512px"
+        />
       </motion.div>
 
       {/* Gradient Overlay for better readability */}
