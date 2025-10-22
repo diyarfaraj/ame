@@ -19,16 +19,28 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Logo */}
+      {/* Top Left - "Ame" Logo */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
         className="absolute top-8 left-8 md:top-12 md:left-12 z-10"
       >
-        <h1 className="text-white text-5xl md:text-7xl font-light tracking-widest">
-          A
+        <h1 className="text-white text-3xl md:text-4xl font-light tracking-wider">
+          Ame
         </h1>
+      </motion.div>
+
+      {/* Bottom Right - Large "A" Watermark */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5, delay: 0.8 }}
+        className="absolute bottom-8 right-8 md:bottom-16 md:right-16 z-10"
+      >
+        <h2 className="text-white/30 text-[12rem] md:text-[20rem] lg:text-[25rem] font-light leading-none">
+          A
+        </h2>
       </motion.div>
 
       {/* Gradient Overlay for better readability */}
