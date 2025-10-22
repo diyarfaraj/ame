@@ -11,7 +11,7 @@ export default function PhilosophySection() {
   return (
     <section
       ref={ref}
-      className="min-h-screen flex items-center justify-center px-6 md:px-12 py-24 md:py-32 bg-cream-100"
+      className="min-h-screen flex items-center justify-center px-6 md:px-12 py-24 md:py-32 bg-[#d5d1c8]"
     >
       <motion.div
         initial={{ opacity: 0, y: 40 }}
