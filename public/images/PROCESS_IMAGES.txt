@@ -1,0 +1,27 @@
+PROCESS SECTION IMAGES
+======================
+
+Please add these 5 images to the public/images/ directory:
+
+1. process-1.png - "Brief" step
+   Image showing materials/sketches/planning on desk
+
+2. process-2.png - "Concepts" step
+   Image showing person working on design concepts
+
+3. process-3.png - "Materials" step
+   Image showing hands exchanging or selecting materials
+
+4. process-4.png - "Creation" step
+   Image showing hands crafting/building/creating
+
+5. process-5.png - "Completion" step
+   Image showing finished interior space
+
+SPECIFICATIONS:
+- Format: PNG
+- Recommended size: 800x600px (4:3 aspect ratio)
+- These images are from the screenshot you provided
+- File names must match exactly (lowercase)
+
+After adding these images, the "Our process" section will display properly.
