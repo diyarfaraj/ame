@@ -1,0 +1,18 @@
+PROCESS PAGE HERO IMAGE
+========================
+
+Please add this image to the public/images/ directory:
+
+process-hero.png
+- Hero background image for the /process page
+- Should be an interior design image showcasing the design process
+- Will be used as the full-screen hero background
+
+SPECIFICATIONS:
+- Format: PNG
+- Recommended size: 1920x1080px or larger
+- Landscape orientation
+- High quality interior design photograph
+
+This image will be displayed as the hero background on the Process page,
+with the Ame logo in top-left and A watermark in bottom-right (same as other hero sections).

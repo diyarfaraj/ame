@@ -12,7 +12,7 @@ export default function Navigation() {
 
   const mainMenuItems = [
     { label: "Projects", href: "/projects" },
-    { label: "Process", href: "#process" },
+    { label: "Process", href: "/process" },
     { label: "Website", href: "/" },
   ];
 
