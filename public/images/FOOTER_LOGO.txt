@@ -1,0 +1,17 @@
+FOOTER LOGO IMAGE
+==================
+
+Please add this image to the public/images/ directory:
+
+ame-white.png
+- White version of the Ame logo
+- Used in the footer section (dark background)
+- Should be the same design as ame.png but in white color
+
+SPECIFICATIONS:
+- Format: PNG (with transparency)
+- Recommended size: Same as ame.png
+- Color: White (#FFFFFF)
+- Background: Transparent
+
+This logo will be displayed at the top of the footer on a dark gray background (#2C2C2C).
