@@ -3,13 +3,17 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-export default function HeroSection() {
+interface HeroSectionProps {
+  backgroundImage?: string;
+}
+
+export default function HeroSection({ backgroundImage = "/images/hero.png" }: HeroSectionProps) {
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Hero Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero.png"
+          src={backgroundImage}
           alt="Ame Interior Design - Minimalist living space with natural elements"
           fill
           priority

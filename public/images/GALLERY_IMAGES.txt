@@ -1,0 +1,33 @@
+PROJECTS GALLERY IMAGES
+=======================
+
+Please add these 6 additional project images to the public/images/ directory:
+
+Note: You already have project-1.png, project-2.png, and project-3.png
+
+4. project-4.png - "Office Studio"
+   Image showing office/studio space with dark theme
+
+5. project-5.png - "Open Plan Living"
+   Image showing open plan kitchen/living area
+
+6. project-6.png - "Deluxe Apartment"
+   Image showing deluxe apartment with bar stools
+
+7. project-7.png - "En Suite Bathroom"
+   Image showing modern en suite bathroom
+
+8. project-8.png - "Duplex Apartment"
+   Image showing duplex apartment living room
+
+9. project-9.png - "Home Styling"
+   Image showing home styling/bedroom setup
+
+SPECIFICATIONS:
+- Format: PNG
+- Recommended size: 800x600px (4:3 aspect ratio)
+- These images are from the screenshot you provided
+- File names must match exactly (lowercase)
+
+Total projects in gallery: 9
+The gallery displays in a 3x3 grid on desktop.

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,9 +11,9 @@ export default function Navigation() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const mainMenuItems = [
-    { label: "Projects", href: "#projects" },
+    { label: "Projects", href: "/projects" },
     { label: "Process", href: "#process" },
-    { label: "Website", href: "#" },
+    { label: "Website", href: "/" },
   ];
 
   const secondaryMenuItems = [
@@ -101,13 +102,13 @@ export default function Navigation() {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.4, delay: 0.1 * index + 0.3 }}
                         >
-                          <a
+                          <Link
                             href={item.href}
                             onClick={toggleMenu}
                             className="text-white text-xl md:text-2xl font-light hover:text-gray-300 transition-colors duration-300 block"
                           >
                             {item.label}
-                          </a>
+                          </Link>
                         </motion.li>
                       ))}
                     </ul>
@@ -129,13 +130,13 @@ export default function Navigation() {
                           animate={{ opacity: 1, x: 0 }}
                           transition={{ duration: 0.4, delay: 0.1 * index + 0.6 }}
                         >
-                          <a
+                          <Link
                             href={item.href}
                             onClick={toggleMenu}
                             className="text-white/80 text-base md:text-lg font-light hover:text-white transition-colors duration-300 block"
                           >
                             {item.label}
-                          </a>
+                          </Link>
                         </motion.li>
                       ))}
                     </ul>
