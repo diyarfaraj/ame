@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 interface HeroSectionProps {
@@ -30,14 +31,16 @@ export default function HeroSection({ backgroundImage = "/images/hero.png" }: He
         transition={{ duration: 1, delay: 0.5 }}
         className="absolute top-8 left-8 md:top-12 md:left-12 z-10 w-20 h-8 md:w-28 md:h-11"
       >
-        <Image
-          src="/images/ame.png"
-          alt="Ame Interior Design"
-          fill
-          className="object-contain"
-          sizes="(max-width: 768px) 80px, 112px"
-          priority
-        />
+        <Link href="/" className="block w-full h-full">
+          <Image
+            src="/images/ame.png"
+            alt="Ame Interior Design"
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 80px, 112px"
+            priority
+          />
+        </Link>
       </motion.div>
 
       {/* Bottom Right - Large "A" Watermark Image */}

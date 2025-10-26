@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -21,7 +22,7 @@ export default function Footer() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="flex justify-center mb-16"
           >
-            <div className="relative w-32 h-12">
+            <Link href="/" className="relative w-32 h-12 block">
               <Image
                 src="/images/ame.png"
                 alt="Ame Interior Design"
@@ -29,7 +30,7 @@ export default function Footer() {
                 className="object-contain"
                 sizes="128px"
               />
-            </div>
+            </Link>
           </motion.div>
 
           {/* CTA Section */}

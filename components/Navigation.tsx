@@ -18,7 +18,7 @@ export default function Navigation() {
 
   const secondaryMenuItems = [
     { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -81,7 +81,7 @@ export default function Navigation() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                     className="mb-16"
                   >
-                    <div className="relative w-16 h-8">
+                    <Link href="/" onClick={toggleMenu} className="block relative w-16 h-8">
                       <Image
                         src="/images/ame.png"
                         alt="Ame"
@@ -89,7 +89,7 @@ export default function Navigation() {
                         className="object-contain object-left"
                         sizes="64px"
                       />
-                    </div>
+                    </Link>
                   </motion.div>
 
                   {/* Main Menu Items */}
