@@ -1,0 +1,18 @@
+BRIAR FULL-BODY IMAGE
+=====================
+
+Please add this image to the public/images/ directory:
+
+briar-full.png
+- Full-body photo of Briar Faraj sitting on stool
+- Black t-shirt and jeans
+- Used in the "Simplicity & Elegance" story section on process page
+
+SPECIFICATIONS:
+- Format: PNG
+- Recommended size: 800x1000px or larger (portrait orientation)
+- Aspect ratio: 3:4 or 4:5
+- High quality photograph
+
+This image will be displayed in the right column of the story section,
+alongside Briar's background story on the left.

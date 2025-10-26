@@ -1,6 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import StorySection from "@/components/StorySection";
 
 export const metadata = {
   title: "Process - Ame Interior Design",
@@ -13,6 +14,7 @@ export default function ProcessPage() {
       <Navigation />
       <main className="min-h-screen">
         <HeroSection backgroundImage="/images/process-hero.png" />
+        <StorySection />
         <Footer />
       </main>
     </>
