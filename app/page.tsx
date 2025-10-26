@@ -3,6 +3,7 @@ import PhilosophySection from "@/components/PhilosophySection";
 import AboutSection from "@/components/AboutSection";
 import ProcessSection from "@/components/ProcessSection";
 import KitchenSection from "@/components/KitchenSection";
+import ProjectsSection from "@/components/ProjectsSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <AboutSection />
       <ProcessSection />
       <KitchenSection />
+      <ProjectsSection />
     </main>
   );
 }
