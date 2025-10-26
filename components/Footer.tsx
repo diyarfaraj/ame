@@ -23,7 +23,7 @@ export default function Footer() {
           >
             <div className="relative w-32 h-12">
               <Image
-                src="/images/ame-white.png"
+                src="/images/ame.png"
                 alt="Ame Interior Design"
                 fill
                 className="object-contain"
