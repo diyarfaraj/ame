@@ -21,8 +21,8 @@ const config: Config = {
         }
       },
       fontFamily: {
-        serif: ['Georgia', 'Cambria', 'Times New Roman', 'Times', 'serif'],
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Marcellus', 'serif'],
+        body: ['IvyEpic Variable', 'Georgia', 'Cambria', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 1s ease-in-out',
