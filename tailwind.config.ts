@@ -22,7 +22,7 @@ const config: Config = {
       },
       fontFamily: {
         heading: ['Marcellus', 'serif'],
-        body: ['IvyEpic Variable', 'Georgia', 'Cambria', 'serif'],
+        body: ['IvyEpic', 'IvyEpic Variable', 'Georgia', 'Cambria', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 1s ease-in-out',
