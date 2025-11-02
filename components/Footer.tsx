@@ -68,43 +68,27 @@ export default function Footer() {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 pt-12 border-t border-white/10"
+            className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 pt-12 border-t border-white/10"
           >
-            {/* Contact Info */}
+            {/* Email */}
             <div>
-              <h3 className="text-sm tracking-widest uppercase mb-4 text-gray-400">
-                CONTACT
-              </h3>
-              <div className="space-y-2 text-gray-300">
-                <p>Telephone number</p>
-                <p>Email Address</p>
-              </div>
-            </div>
-
-            {/* Address */}
-            <div>
-              <p className="text-gray-300">Address goes here</p>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex gap-8 md:justify-end items-start">
               <a
-                href="#"
+                href="mailto:Briar@Ame-studio.com"
+                className="text-gray-300 hover:text-white transition-colors duration-300"
+              >
+                Email
+              </a>
+            </div>
+
+            {/* Instagram */}
+            <div>
+              <a
+                href="https://www.instagram.com/amestudio.me/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors duration-300"
               >
                 Instagram
-              </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:text-white transition-colors duration-300"
-              >
-                Pinterest
-              </a>
-              <a
-                href="#"
-                className="text-gray-300 hover:text-white transition-colors duration-300"
-              >
-                LinkedIn
               </a>
             </div>
           </motion.div>
