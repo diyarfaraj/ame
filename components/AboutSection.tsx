@@ -36,7 +36,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-4xl md:text-5xl font-light mb-6 leading-tight"
+              className="font-heading text-4xl md:text-5xl font-normal mb-6 leading-tight"
             >
               Made with intention
             </motion.h3>
@@ -73,7 +73,7 @@ export default function AboutSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-3xl md:text-4xl font-light text-stone-800 mb-4"
+              className="font-heading text-3xl md:text-4xl font-normal text-stone-800 mb-4"
             >
               Briar Faraj
             </motion.h3>

@@ -43,7 +43,7 @@ export default function ProcessSection() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="text-4xl md:text-5xl lg:text-6xl font-light text-white mb-16 md:mb-24"
+          className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal text-white mb-16 md:mb-24"
         >
           Our process
         </motion.h2>
@@ -70,7 +70,7 @@ export default function ProcessSection() {
               </div>
 
               {/* Title */}
-              <h3 className="text-white text-lg md:text-xl font-light">
+              <h3 className="font-heading text-white text-lg md:text-xl font-normal">
                 {step.title}
               </h3>
             </motion.div>

@@ -21,7 +21,7 @@ export default function StorySection() {
             className="space-y-6 lg:pr-8"
           >
             {/* Heading */}
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-stone-800 leading-tight">
+            <h2 className="font-heading text-2xl md:text-3xl lg:text-4xl font-normal text-stone-800 leading-tight">
               Simplicity & Elegance
             </h2>
 

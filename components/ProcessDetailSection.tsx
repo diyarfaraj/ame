@@ -90,7 +90,7 @@ export default function ProcessDetailSection() {
             >
               <div className="w-3/5 md:w-3/4 space-y-3">
                 <p className="text-white/60 text-xs md:text-sm">{step.number}</p>
-                <h3 className="text-white text-xl md:text-2xl font-light uppercase tracking-wide">
+                <h3 className="font-heading text-white text-xl md:text-2xl font-normal uppercase tracking-wide">
                   {step.title}
                 </h3>
                 <p className="text-white/80 text-xs leading-relaxed">

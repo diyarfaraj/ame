@@ -56,7 +56,7 @@ export default function ProjectsGallery() {
               </div>
 
               {/* Project Title */}
-              <h3 className="text-stone-800 text-base md:text-lg font-light">
+              <h3 className="font-heading text-stone-800 text-base md:text-lg font-normal">
                 {project.title}
               </h3>
             </motion.div>

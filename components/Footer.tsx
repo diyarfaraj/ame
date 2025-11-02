@@ -40,7 +40,7 @@ export default function Footer() {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
             className="text-center mb-20"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-light mb-4">
+            <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-normal mb-4">
               Start your journey with amé.
             </h2>
             <p className="text-gray-400 text-lg md:text-xl mb-12">

@@ -19,7 +19,7 @@ export default function PhilosophySection() {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="max-w-4xl mx-auto text-center"
       >
-        <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-stone-800 mb-12 leading-tight">
+        <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal text-stone-800 mb-12 leading-tight">
           Creating interiors that move you
         </h2>
 

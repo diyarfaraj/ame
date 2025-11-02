@@ -34,7 +34,7 @@ export default function ProjectsSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl md:text-5xl lg:text-6xl font-light text-stone-800 mb-16 md:mb-20"
+            className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal text-stone-800 mb-16 md:mb-20"
           >
             View our projects
           </motion.h2>
@@ -61,7 +61,7 @@ export default function ProjectsSection() {
                 </div>
 
                 {/* Project Title */}
-                <h3 className="text-stone-800 text-lg md:text-xl font-light">
+                <h3 className="font-heading text-stone-800 text-lg md:text-xl font-normal">
                   {project.title}
                 </h3>
               </motion.div>
