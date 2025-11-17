@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -50,14 +51,16 @@ export default function AboutSection() {
               Every detail is chosen with feeling, shaped by craftsmanship, and guided by authenticity.
             </motion.p>
 
-            <motion.button
-              initial={{ opacity: 0, y: 20 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="border border-white/80 hover:bg-white hover:text-stone-900 transition-all duration-300 px-8 py-3 text-sm tracking-wider uppercase w-fit"
-            >
-              Find out more
-            </motion.button>
+            <Link href="/packages">
+              <motion.button
+                initial={{ opacity: 0, y: 20 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="border border-white/80 hover:bg-white hover:text-stone-900 transition-all duration-300 px-8 py-3 text-sm tracking-wider uppercase w-fit"
+              >
+                Find out more
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
 
