@@ -17,7 +17,7 @@ export default function PackagesHero() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-black/55" />
       </div>
 
       {/* Hero Content */}
