@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -8,24 +9,27 @@ import { useRef } from "react";
 const packages = [
   {
     title: "Starter Pack",
+    packageName: "Starter",
     price: "from 19,500",
     description: "Perfect for small spaces and first homes. Includes essential furniture pieces with timeless design.",
     image: "/images/STARTER.png",
-    buttonText: "View Details",
+    buttonText: "Get Started",
   },
   {
     title: "Boutique Pack",
+    packageName: "Boutique",
     price: "from 22,500",
     description: "Elevated comfort with curated pieces. Ideal for modern apartments and townhouses.",
     image: "/images/BOUTIQUE.png",
-    buttonText: "View Details",
+    buttonText: "Get Started",
   },
   {
     title: "Signature Tailor-Made",
+    packageName: "Signature",
     price: "Price on Request",
     description: "Fully bespoke interior design. Custom furniture, materials, and finishing touches crafted exclusively for you.",
     image: "/images/SIGNATURE.png",
-    buttonText: "View Details",
+    buttonText: "Get Started",
   },
 ];
 
@@ -83,9 +87,12 @@ export default function PackagesGrid() {
                 <p className="text-stone-600 text-sm md:text-base leading-relaxed">
                   {pkg.description}
                 </p>
-                <button className="mt-4 border border-stone-800 text-stone-800 hover:bg-stone-800 hover:text-white transition-all duration-300 px-8 py-3 text-sm tracking-wider uppercase">
+                <Link
+                  href={`/get-started?package=${pkg.packageName}`}
+                  className="inline-block mt-4 border border-stone-800 text-stone-800 hover:bg-stone-800 hover:text-white transition-all duration-300 px-8 py-3 text-sm tracking-wider uppercase text-center"
+                >
                   {pkg.buttonText}
-                </button>
+                </Link>
               </div>
             </motion.div>
           ))}
