@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function PackagesHero() {
@@ -19,6 +20,25 @@ export default function PackagesHero() {
         />
         <div className="absolute inset-0 bg-black/55" />
       </div>
+
+      {/* Top Left - "Ame" Logo */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        className="absolute top-8 left-8 md:top-12 md:left-12 z-10 w-20 h-8 md:w-28 md:h-11"
+      >
+        <Link href="/" className="block w-full h-full">
+          <Image
+            src="/images/ame.png"
+            alt="Ame Interior Design"
+            fill
+            className="object-contain"
+            sizes="(max-width: 768px) 80px, 112px"
+            priority
+          />
+        </Link>
+      </motion.div>
 
       {/* Hero Content */}
       <div className="relative h-full flex flex-col justify-center items-center text-center px-6 md:px-12 text-white">
