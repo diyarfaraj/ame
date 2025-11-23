@@ -10,7 +10,7 @@ const packages = [
   {
     title: "Starter Pack",
     packageName: "Starter",
-    price: "from 19,500",
+    price: "from AED 71,600",
     description: "Perfect for small spaces and first homes. Includes essential furniture pieces with timeless design.",
     image: "/images/STARTER.png",
     buttonText: "Get Started",
@@ -18,7 +18,7 @@ const packages = [
   {
     title: "Boutique Pack",
     packageName: "Boutique",
-    price: "from 22,500",
+    price: "from AED 82,600",
     description: "Elevated comfort with curated pieces. Ideal for modern apartments and townhouses.",
     image: "/images/BOUTIQUE.png",
     buttonText: "Get Started",
