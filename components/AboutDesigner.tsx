@@ -72,7 +72,7 @@ export default function AboutDesigner() {
             >
               <p>
                 Guided by intuition and emotion, Briar shapes spaces that feel as personal as they are timeless.
-                With a deep appreciation for natural materials and thoughtful details, she creates environments
+                With a deep appreciation for natural materials and thoughtful details, he creates environments
                 that speak to the soul.
               </p>
               <p>
