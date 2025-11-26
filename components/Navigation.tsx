@@ -11,13 +11,13 @@ export default function Navigation() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const mainMenuItems = [
-    { label: "Projects", href: "/projects" },
-    { label: "Process", href: "/process" },
-    { label: "Website", href: "/" },
+    { label: "Home", href: "/" },
+    { label: "Services", href: "/process" },
+    { label: "Portfolio", href: "/projects" },
   ];
 
   const secondaryMenuItems = [
-    { label: "About", href: "#about" },
+    { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
   ];
 
