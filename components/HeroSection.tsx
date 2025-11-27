@@ -60,7 +60,43 @@ export default function HeroSection({ backgroundImage = "/images/hero.png" }: He
       </motion.div>
 
       {/* Gradient Overlay for better readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30" />
+
+      {/* Centered Hero Content */}
+      <div className="absolute inset-0 flex items-center justify-center z-10">
+        <div className="text-center px-6">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-6 leading-tight"
+          >
+            Design that feels like home
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+            className="text-white text-lg md:text-xl lg:text-2xl mb-10 max-w-2xl mx-auto leading-relaxed"
+          >
+            We create warm, modern, neutral interiors designed around you.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.7 }}
+          >
+            <Link
+              href="/packages"
+              className="inline-block border border-white text-white hover:bg-white hover:text-stone-900 transition-all duration-300 px-10 py-4 text-sm tracking-widest uppercase"
+            >
+              Get Started
+            </Link>
+          </motion.div>
+        </div>
+      </div>
     </section>
   );
 }
