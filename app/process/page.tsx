@@ -1,7 +1,7 @@
 import HeroSection from "@/components/HeroSection";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import StorySection from "@/components/StorySection";
+import ProcessIntroSection from "@/components/ProcessIntroSection";
 import ProcessDetailSection from "@/components/ProcessDetailSection";
 import TestimonialSection from "@/components/TestimonialSection";
 
@@ -16,7 +16,7 @@ export default function ProcessPage() {
       <Navigation />
       <main className="min-h-screen">
         <HeroSection backgroundImage="/images/process-hero.png" />
-        <StorySection />
+        <ProcessIntroSection />
         <ProcessDetailSection />
         <TestimonialSection />
         <Footer />

@@ -18,7 +18,7 @@ export default function PackagesHero() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/55" />
+        <div className="absolute inset-0 bg-black/55 pointer-events-none" />
       </div>
 
       {/* Top Left - "Ame" Logo */}
@@ -26,7 +26,7 @@ export default function PackagesHero() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="absolute top-8 left-8 md:top-12 md:left-12 z-10 w-20 h-8 md:w-28 md:h-11"
+        className="absolute top-8 left-8 md:top-12 md:left-12 z-20 w-20 h-8 md:w-28 md:h-11"
       >
         <Link href="/" className="block w-full h-full">
           <Image

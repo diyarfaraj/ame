@@ -29,7 +29,7 @@ export default function HeroSection({ backgroundImage = "/images/hero.png" }: He
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 0.5 }}
-        className="absolute top-8 left-8 md:top-12 md:left-12 z-10 w-20 h-8 md:w-28 md:h-11"
+        className="absolute top-8 left-8 md:top-12 md:left-12 z-20 w-20 h-8 md:w-28 md:h-11"
       >
         <Link href="/" className="block w-full h-full">
           <Image
@@ -60,7 +60,7 @@ export default function HeroSection({ backgroundImage = "/images/hero.png" }: He
       </motion.div>
 
       {/* Gradient Overlay for better readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/30 pointer-events-none" />
 
       {/* Centered Hero Content - positioned slightly below center */}
       <div className="absolute inset-0 flex items-center justify-center z-10 pt-40 md:pt-52">
