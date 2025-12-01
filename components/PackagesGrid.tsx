@@ -6,6 +6,10 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
+interface PackagesGridProps {
+  selectedInspirations?: string[];
+}
+
 const packages = [
   {
     title: "Starter Pack",
@@ -33,7 +37,7 @@ const packages = [
   },
 ];
 
-export default function PackagesGrid() {
+export default function PackagesGrid({ selectedInspirations = [] }: PackagesGridProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
@@ -88,7 +92,7 @@ export default function PackagesGrid() {
                   {pkg.description}
                 </p>
                 <Link
-                  href={`/get-started?package=${pkg.packageName}`}
+                  href={`/get-started?package=${pkg.packageName}${selectedInspirations.length > 0 ? `&inspirations=${selectedInspirations.join(",")}` : ""}`}
                   className="inline-block mt-4 border border-stone-800 text-stone-800 hover:bg-stone-800 hover:text-white transition-all duration-300 px-8 py-3 text-sm tracking-wider uppercase text-center"
                 >
                   {pkg.buttonText}

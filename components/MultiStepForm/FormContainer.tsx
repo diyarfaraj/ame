@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ProgressBar from "./ProgressBar";
 import WelcomeStep from "./steps/WelcomeStep";
@@ -26,14 +26,40 @@ export interface FormData {
   message: string;
 }
 
-interface FormContainerProps {
-  initialPackage?: string;
-}
+const STORAGE_KEY = "ame_quiz_data";
 
-export default function FormContainer({ initialPackage = "" }: FormContainerProps) {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [direction, setDirection] = useState(1);
-  const [formData, setFormData] = useState<FormData>({
+const getInitialFormData = (initialPackage: string): FormData => {
+  if (typeof window === "undefined") {
+    return {
+      projectType: "",
+      spaceType: "",
+      squareFootage: "",
+      timeline: "",
+      budgetRange: "",
+      selectedPackage: initialPackage,
+      stylePreferences: [],
+      inspirations: "",
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    };
+  }
+
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved) {
+    try {
+      const parsed = JSON.parse(saved);
+      return {
+        ...parsed,
+        selectedPackage: initialPackage || parsed.selectedPackage,
+      };
+    } catch {
+      // Invalid JSON, return default
+    }
+  }
+
+  return {
     projectType: "",
     spaceType: "",
     squareFootage: "",
@@ -46,12 +72,33 @@ export default function FormContainer({ initialPackage = "" }: FormContainerProp
     email: "",
     phone: "",
     message: "",
-  });
+  };
+};
+
+interface FormContainerProps {
+  initialPackage?: string;
+  initialInspirations?: string[];
+}
+
+export default function FormContainer({ initialPackage = "", initialInspirations = [] }: FormContainerProps) {
+  const [currentStep, setCurrentStep] = useState(0);
+  const [direction, setDirection] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState<FormData>(() => getInitialFormData(initialPackage));
 
   const totalSteps = 7;
 
+  // Save form data to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(formData));
+  }, [formData]);
+
   const updateFormData = (data: Partial<FormData>) => {
     setFormData((prev) => ({ ...prev, ...data }));
+  };
+
+  const clearStorage = () => {
+    localStorage.removeItem(STORAGE_KEY);
   };
 
   const nextStep = () => {
@@ -68,9 +115,48 @@ export default function FormContainer({ initialPackage = "" }: FormContainerProp
     }
   };
 
-  const handleSubmit = () => {
-    localStorage.setItem("consultationData", JSON.stringify(formData));
-    nextStep();
+  const handleSubmit = async () => {
+    setIsSubmitting(true);
+    try {
+      const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID || "xblnydga";
+      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          projectType: formData.projectType,
+          spaceType: formData.spaceType,
+          squareFootage: formData.squareFootage || "Not provided",
+          timeline: formData.timeline,
+          budgetRange: formData.budgetRange,
+          selectedPackage: formData.selectedPackage,
+          stylePreferences: formData.stylePreferences.join(", "),
+          inspirations: formData.inspirations || "None",
+          message: formData.message || "None",
+          selectedInspirationImages: initialInspirations.length > 0 ? initialInspirations.join(", ") : "None selected",
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send");
+      }
+
+      // Clear localStorage after successful submission
+      clearStorage();
+      nextStep();
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      // Clear storage and proceed to thank you page even if email fails
+      clearStorage();
+      nextStep();
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const slideVariants = {
@@ -124,6 +210,7 @@ export default function FormContainer({ initialPackage = "" }: FormContainerProp
       updateFormData={updateFormData}
       onNext={handleSubmit}
       onBack={prevStep}
+      isSubmitting={isSubmitting}
     />,
     <ThankYouStep key="thankyou" formData={formData} />,
   ];

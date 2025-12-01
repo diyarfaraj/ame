@@ -7,8 +7,15 @@ import { Suspense } from "react";
 function GetStartedContent() {
   const searchParams = useSearchParams();
   const packageParam = searchParams.get("package");
+  const inspirationsParam = searchParams.get("inspirations");
+  const initialInspirations = inspirationsParam ? inspirationsParam.split(",") : [];
 
-  return <FormContainer initialPackage={packageParam || ""} />;
+  return (
+    <FormContainer
+      initialPackage={packageParam || ""}
+      initialInspirations={initialInspirations}
+    />
+  );
 }
 
 export default function GetStartedPage() {

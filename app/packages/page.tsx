@@ -1,6 +1,5 @@
 import Navigation from "@/components/Navigation";
-import PackagesHero from "@/components/PackagesHero";
-import PackagesGrid from "@/components/PackagesGrid";
+import PackagesFlow from "@/components/PackagesFlow";
 import Footer from "@/components/Footer";
 
 export const metadata = {
@@ -13,8 +12,7 @@ export default function PackagesPage() {
     <>
       <Navigation />
       <main className="min-h-screen">
-        <PackagesHero />
-        <PackagesGrid />
+        <PackagesFlow />
         <Footer />
       </main>
     </>
