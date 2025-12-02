@@ -58,8 +58,21 @@ export async function POST(request: Request) {
 
           ${selectedInspirationImages && selectedInspirationImages !== "None selected" ? `
           <div style="margin-bottom: 30px;">
-            <h2 style="color: #78716c; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px;">Inspiration Images Selected</h2>
-            <p style="color: #292524; margin: 5px 0;">${selectedInspirationImages}</p>
+            <h2 style="color: #78716c; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">Inspiration Images Selected</h2>
+            <table cellpadding="5" cellspacing="0" border="0" style="width: 100%;">
+              <tr>
+                ${selectedInspirationImages.split(", ").map((img: string, index: number) => `
+                  ${index > 0 && index % 3 === 0 ? '</tr><tr>' : ''}
+                  <td style="width: 33%; vertical-align: top; padding: 5px;">
+                    <img
+                      src="https://ame-studio.com/_next/image?url=%2Fimages%2Finspiration%2F${encodeURIComponent(img)}.png&w=384&q=75"
+                      alt="${img.replace(/-/g, ' ')}"
+                      style="width: 100%; height: auto; border-radius: 4px; display: block;"
+                    />
+                  </td>
+                `).join("")}
+              </tr>
+            </table>
           </div>
           ` : ""}
 
