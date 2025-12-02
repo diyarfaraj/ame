@@ -5,23 +5,23 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const inspirationImages = [
-  { src: "/images/inspiration/Bold-Minimal-Living-Composition.png", name: "Bold-Minimal-Living-Composition" },
-  { src: "/images/inspiration/Desert-Minimal-Living-Glow.png", name: "Desert-Minimal-Living-Glow" },
-  { src: "/images/inspiration/Earthy-Modern-Minimal-Living-01.png", name: "Earthy-Modern-Minimal-Living-01" },
-  { src: "/images/inspiration/Italian-Contemporary-Living-GoldMarble.png", name: "Italian-Contemporary-Living-GoldMarble" },
-  { src: "/images/inspiration/Japandi-Warm-Minimal-Concept.png", name: "Japandi-Warm-Minimal-Concept" },
-  { src: "/images/inspiration/Light-Scandi-Interior-Serenity.png", name: "Light-Scandi-Interior-Serenity" },
-  { src: "/images/inspiration/Light-Scandi-Living-Concept.png", name: "Light-Scandi-Living-Concept" },
-  { src: "/images/inspiration/Moody-Modern-Glam-Living-01.png", name: "Moody-Modern-Glam-Living-01" },
-  { src: "/images/inspiration/Natural-Tone-Living-Serenity.png", name: "Natural-Tone-Living-Serenity" },
-  { src: "/images/inspiration/Organic-Minimal-Living-Serenity.png", name: "Organic-Minimal-Living-Serenity" },
-  { src: "/images/inspiration/Parisian-Modern-Luxury-Salon-01.png", name: "Parisian-Modern-Luxury-Salon-01" },
-  { src: "/images/inspiration/Scandinavian-Soft-Living-Dubai-View.png", name: "Scandinavian-Soft-Living-Dubai-View" },
-  { src: "/images/inspiration/Sculptural-Minimal-Interior-Concept.png", name: "Sculptural-Minimal-Interior-Concept" },
-  { src: "/images/inspiration/Warm-Minimal-Modern-Interior-01.png", name: "Warm-Minimal-Modern-Interior-01" },
-  { src: "/images/inspiration/Warm-Neutral-Living-Earthy-Modern.png", name: "Warm-Neutral-Living-Earthy-Modern" },
-  { src: "/images/inspiration/Warm-Soft-Modern-Living-Concept.png", name: "Warm-Soft-Modern-Living-Concept" },
-  { src: "/images/inspiration/Warm-Wood-Minimal-Atmosphere.png", name: "Warm-Wood-Minimal-Atmosphere" },
+  { src: "/images/inspiration/Bold-Minimal-Living-Composition.png", name: "Bold-Minimal-Living-Composition", alt: "Bold minimal living room with striking composition and clean lines" },
+  { src: "/images/inspiration/Desert-Minimal-Living-Glow.png", name: "Desert-Minimal-Living-Glow", alt: "Desert-inspired minimal living space with warm golden glow" },
+  { src: "/images/inspiration/Earthy-Modern-Minimal-Living-01.png", name: "Earthy-Modern-Minimal-Living-01", alt: "Earthy modern minimal living room with natural tones" },
+  { src: "/images/inspiration/Italian-Contemporary-Living-GoldMarble.png", name: "Italian-Contemporary-Living-GoldMarble", alt: "Italian contemporary living room with gold accents and marble details" },
+  { src: "/images/inspiration/Japandi-Warm-Minimal-Concept.png", name: "Japandi-Warm-Minimal-Concept", alt: "Japandi style warm minimal interior concept" },
+  { src: "/images/inspiration/Light-Scandi-Interior-Serenity.png", name: "Light-Scandi-Interior-Serenity", alt: "Light Scandinavian interior design with serene atmosphere" },
+  { src: "/images/inspiration/Light-Scandi-Living-Concept.png", name: "Light-Scandi-Living-Concept", alt: "Light Scandinavian living room design concept" },
+  { src: "/images/inspiration/Moody-Modern-Glam-Living-01.png", name: "Moody-Modern-Glam-Living-01", alt: "Moody modern glamour living room with sophisticated styling" },
+  { src: "/images/inspiration/Natural-Tone-Living-Serenity.png", name: "Natural-Tone-Living-Serenity", alt: "Natural tone living space with serene ambiance" },
+  { src: "/images/inspiration/Organic-Minimal-Living-Serenity.png", name: "Organic-Minimal-Living-Serenity", alt: "Organic minimal living room with calming natural elements" },
+  { src: "/images/inspiration/Parisian-Modern-Luxury-Salon-01.png", name: "Parisian-Modern-Luxury-Salon-01", alt: "Parisian modern luxury salon with elegant furnishings" },
+  { src: "/images/inspiration/Scandinavian-Soft-Living-Dubai-View.png", name: "Scandinavian-Soft-Living-Dubai-View", alt: "Soft Scandinavian living room with Dubai city view" },
+  { src: "/images/inspiration/Sculptural-Minimal-Interior-Concept.png", name: "Sculptural-Minimal-Interior-Concept", alt: "Sculptural minimal interior with artistic design elements" },
+  { src: "/images/inspiration/Warm-Minimal-Modern-Interior-01.png", name: "Warm-Minimal-Modern-Interior-01", alt: "Warm minimal modern interior with cozy atmosphere" },
+  { src: "/images/inspiration/Warm-Neutral-Living-Earthy-Modern.png", name: "Warm-Neutral-Living-Earthy-Modern", alt: "Warm neutral living room with earthy modern styling" },
+  { src: "/images/inspiration/Warm-Soft-Modern-Living-Concept.png", name: "Warm-Soft-Modern-Living-Concept", alt: "Warm soft modern living room design concept" },
+  { src: "/images/inspiration/Warm-Wood-Minimal-Atmosphere.png", name: "Warm-Wood-Minimal-Atmosphere", alt: "Warm wood minimal atmosphere with natural textures" },
 ];
 
 interface InspirationPickerProps {
@@ -85,7 +85,7 @@ export default function InspirationPicker({ onNext, onSkip }: InspirationPickerP
                   >
                     <Image
                       src={image.src}
-                      alt={image.name}
+                      alt={image.alt}
                       width={300}
                       height={index % 3 === 0 ? 400 : index % 3 === 1 ? 300 : 350}
                       className="w-full h-auto object-cover"
@@ -171,7 +171,7 @@ export default function InspirationPicker({ onNext, onSkip }: InspirationPickerP
               >
                 <Image
                   src={image.src}
-                  alt={image.name}
+                  alt={image.alt}
                   width={200}
                   height={index % 3 === 0 ? 280 : index % 3 === 1 ? 200 : 240}
                   className="w-full h-auto object-cover"

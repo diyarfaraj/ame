@@ -19,7 +19,7 @@ export default function KitchenSection() {
       >
         <Image
           src="/images/kitchen.png"
-          alt="Ame Interior Design - Kitchen"
+          alt="Modern minimalist kitchen design with warm neutral tones and premium finishes by Amé Studio"
           fill
           quality={95}
           className="object-cover"

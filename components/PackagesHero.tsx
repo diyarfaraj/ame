@@ -11,7 +11,7 @@ export default function PackagesHero() {
       <div className="absolute inset-0">
         <Image
           src="/images/Hero bild.png"
-          alt="Furniture & Interior Packages"
+          alt="Luxury home interior showcasing modern furniture and neutral design - Amé Studio turnkey packages Dubai"
           fill
           priority
           quality={95}
@@ -31,7 +31,7 @@ export default function PackagesHero() {
         <Link href="/" className="block w-full h-full">
           <Image
             src="/images/ame.png"
-            alt="Ame Interior Design"
+            alt="Amé Studio - Luxury Interior Design Dubai"
             fill
             className="object-contain"
             sizes="(max-width: 768px) 80px, 112px"

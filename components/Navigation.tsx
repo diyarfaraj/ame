@@ -84,7 +84,7 @@ export default function Navigation() {
                     <Link href="/" onClick={toggleMenu} className="block relative w-16 h-8">
                       <Image
                         src="/images/ame.png"
-                        alt="Ame"
+                        alt="Amé Studio - Luxury Interior Design Dubai"
                         fill
                         className="object-contain object-left"
                         sizes="64px"

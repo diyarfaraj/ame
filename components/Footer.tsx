@@ -25,7 +25,7 @@ export default function Footer() {
             <Link href="/" className="relative w-32 h-12 block">
               <Image
                 src="/images/ame.png"
-                alt="Ame Interior Design"
+                alt="Amé Studio - Luxury Interior Design Dubai"
                 fill
                 className="object-contain"
                 sizes="128px"

@@ -11,7 +11,7 @@ export default function AboutHero() {
       <div className="absolute inset-0">
         <Image
           src="/images/staircase.png"
-          alt="Amé Studio - Interior Design"
+          alt="Modern minimalist staircase design with clean lines - Amé Studio Dubai interior architecture"
           fill
           priority
           quality={95}
@@ -30,7 +30,7 @@ export default function AboutHero() {
         <Link href="/" className="block w-full h-full">
           <Image
             src="/images/ame.png"
-            alt="Amé Studio"
+            alt="Amé Studio - Luxury Interior Design Dubai"
             fill
             className="object-contain"
             sizes="(max-width: 768px) 80px, 112px"

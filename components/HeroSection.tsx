@@ -15,7 +15,7 @@ export default function HeroSection({ backgroundImage = "/images/hero.png" }: He
       <div className="absolute inset-0">
         <Image
           src={backgroundImage}
-          alt="Ame Interior Design - Minimalist living space with natural elements"
+          alt="Luxury minimalist living room interior with natural materials and warm neutral palette - Amé Studio Dubai"
           fill
           priority
           quality={95}
@@ -34,7 +34,7 @@ export default function HeroSection({ backgroundImage = "/images/hero.png" }: He
         <Link href="/" className="block w-full h-full">
           <Image
             src="/images/ame.png"
-            alt="Ame Interior Design"
+            alt="Amé Studio - Luxury Interior Design Dubai"
             fill
             className="object-contain"
             sizes="(max-width: 768px) 80px, 112px"
@@ -52,7 +52,7 @@ export default function HeroSection({ backgroundImage = "/images/hero.png" }: He
       >
         <Image
           src="/images/A.png"
-          alt="Ame Logo"
+          alt="Amé Studio decorative watermark logo"
           fill
           className="object-contain object-bottom"
           sizes="(max-width: 768px) 176px, (max-width: 1024px) 272px, 352px"

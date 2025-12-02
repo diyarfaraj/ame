@@ -22,7 +22,7 @@ export default function AboutSection() {
         <div className="absolute inset-0">
           <Image
             src="/images/staircase.png"
-            alt="Architectural detail showing craftsmanship"
+            alt="Elegant architectural staircase detail showcasing premium craftsmanship in Dubai residential interior"
             fill
             quality={90}
             className="object-cover"
