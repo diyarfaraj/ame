@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description:
       "Get in touch with Amé Studio to transform your space. Email us for a free initial consultation about your interior design project in Dubai.",
     type: "website",
-    url: "https://ame-interiors.com/contact",
+    url: "https://ame-studio.com/contact",
     images: [
       {
         url: "/images/og-image.jpg",

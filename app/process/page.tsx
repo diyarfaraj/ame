@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description:
       "From initial consultation to final installation - discover our seamless 4-step approach to creating your perfect space in Dubai.",
     type: "website",
-    url: "https://ame-interiors.com/process",
+    url: "https://ame-studio.com/process",
     images: [
       {
         url: "/images/og-image.jpg",

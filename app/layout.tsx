@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "full home furnishing",
     "bespoke interior design",
   ],
-  authors: [{ name: "Amé Studio", url: "https://ame-interiors.com" }],
+  authors: [{ name: "Amé Studio", url: "https://ame-studio.com" }],
   creator: "Amé Studio",
   publisher: "Amé Studio",
   formatDetection: {
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: "Transform your space with Amé Studio. We design warm, modern, neutral spaces that feel calm, curated, and timeless. Turnkey interior solutions in Dubai.",
     type: "website",
     locale: "en_US",
-    url: "https://ame-interiors.com",
+    url: "https://ame-studio.com",
     siteName: "Amé Studio",
     images: [
       {
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     images: ["/images/og-image.jpg"],
     creator: "@amestudio",
   },
-  metadataBase: new URL("https://ame-interiors.com"),
+  metadataBase: new URL("https://ame-studio.com"),
   alternates: {
     canonical: "/",
   },
@@ -84,12 +84,12 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://ame-interiors.com/#organization",
+      "@id": "https://ame-studio.com/#organization",
       name: "Amé Studio",
-      url: "https://ame-interiors.com",
+      url: "https://ame-studio.com",
       logo: {
         "@type": "ImageObject",
-        url: "https://ame-interiors.com/images/ame.png",
+        url: "https://ame-studio.com/images/ame.png",
         width: 200,
         height: 80,
       },
@@ -99,11 +99,11 @@ const jsonLd = {
     },
     {
       "@type": "LocalBusiness",
-      "@id": "https://ame-interiors.com/#localbusiness",
+      "@id": "https://ame-studio.com/#localbusiness",
       name: "Amé Studio",
-      image: "https://ame-interiors.com/images/og-image.jpg",
+      image: "https://ame-studio.com/images/og-image.jpg",
       description: "Luxury interior design and home furnishing services in Dubai. We create warm, modern, neutral spaces with full turnkey solutions.",
-      url: "https://ame-interiors.com",
+      url: "https://ame-studio.com",
       email: "Briar@Ame-studio.com",
       priceRange: "AED 15,000 - AED 200,000+",
       address: {
@@ -135,28 +135,28 @@ const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://ame-interiors.com/#website",
-      url: "https://ame-interiors.com",
+      "@id": "https://ame-studio.com/#website",
+      url: "https://ame-studio.com",
       name: "Amé Studio",
       description: "Luxury Interior Design Dubai",
       publisher: {
-        "@id": "https://ame-interiors.com/#organization",
+        "@id": "https://ame-studio.com/#organization",
       },
       potentialAction: {
         "@type": "SearchAction",
         target: {
           "@type": "EntryPoint",
-          urlTemplate: "https://ame-interiors.com/?s={search_term_string}",
+          urlTemplate: "https://ame-studio.com/?s={search_term_string}",
         },
         "query-input": "required name=search_term_string",
       },
     },
     {
       "@type": "Service",
-      "@id": "https://ame-interiors.com/#service",
+      "@id": "https://ame-studio.com/#service",
       name: "Interior Design Services",
       provider: {
-        "@id": "https://ame-interiors.com/#organization",
+        "@id": "https://ame-studio.com/#organization",
       },
       serviceType: "Interior Design",
       areaServed: {

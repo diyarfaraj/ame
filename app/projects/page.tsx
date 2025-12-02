@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description:
       "Browse our collection of beautifully crafted interior design projects. From modern apartments to luxury villas in Dubai.",
     type: "website",
-    url: "https://ame-interiors.com/projects",
+    url: "https://ame-studio.com/projects",
     images: [
       {
         url: "/images/og-image.jpg",

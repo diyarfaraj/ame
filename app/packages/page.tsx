@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description:
       "Furniture & Interior Packages for Every Home. Turnkey furnishing solutions designed for effortless living, starting from AED 15,000.",
     type: "website",
-    url: "https://ame-interiors.com/packages",
+    url: "https://ame-studio.com/packages",
     images: [
       {
         url: "/images/og-image.jpg",

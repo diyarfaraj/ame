@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description:
       "Take our quick consultation quiz and let us create your perfect space. Personalized interior design recommendations for your Dubai home.",
     type: "website",
-    url: "https://ame-interiors.com/get-started",
+    url: "https://ame-studio.com/get-started",
     images: [
       {
         url: "/images/og-image.jpg",

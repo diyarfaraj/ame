@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://ame-interiors.com/sitemap.xml',
+    sitemap: 'https://ame-studio.com/sitemap.xml',
   }
 }

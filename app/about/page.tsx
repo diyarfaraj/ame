@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description:
       "Creating interiors that move you. We translate emotion into form, shaping spaces that are calm, timeless, and deeply personal.",
     type: "website",
-    url: "https://ame-interiors.com/about",
+    url: "https://ame-studio.com/about",
     images: [
       {
         url: "/images/og-image.jpg",
