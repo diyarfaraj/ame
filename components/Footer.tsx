@@ -74,10 +74,10 @@ export default function Footer() {
             className="pt-12 border-t border-white/10"
           >
             <a
-              href="mailto:contact@ame-studio.com"
+              href="mailto:hello@ame-studio.com"
               className="text-gray-300 hover:text-white transition-colors duration-300"
             >
-              contact@ame-studio.com
+              hello@ame-studio.com
             </a>
           </motion.div>
 
