@@ -118,26 +118,26 @@ export default function FormContainer({ initialPackage = "", initialInspirations
   const handleSubmit = async () => {
     setIsSubmitting(true);
     try {
-      const submitData = new FormData();
-      submitData.append("form-name", "consultation");
-      submitData.append("name", formData.name);
-      submitData.append("email", formData.email);
-      submitData.append("phone", formData.phone);
-      submitData.append("projectType", formData.projectType);
-      submitData.append("spaceType", formData.spaceType);
-      submitData.append("squareFootage", formData.squareFootage || "Not provided");
-      submitData.append("timeline", formData.timeline);
-      submitData.append("budgetRange", formData.budgetRange);
-      submitData.append("selectedPackage", formData.selectedPackage);
-      submitData.append("stylePreferences", formData.stylePreferences.join(", "));
-      submitData.append("inspirations", formData.inspirations || "None");
-      submitData.append("message", formData.message || "None");
-      submitData.append("selectedInspirationImages", initialInspirations.length > 0 ? initialInspirations.join(", ") : "None selected");
-
-      const response = await fetch("/", {
+      const response = await fetch("/api/send-consultation", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(submitData as unknown as Record<string, string>).toString(),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          projectType: formData.projectType,
+          spaceType: formData.spaceType,
+          squareFootage: formData.squareFootage || "Not provided",
+          timeline: formData.timeline,
+          budgetRange: formData.budgetRange,
+          selectedPackage: formData.selectedPackage,
+          stylePreferences: formData.stylePreferences.join(", "),
+          inspirations: formData.inspirations || "None",
+          message: formData.message || "None",
+          selectedInspirationImages: initialInspirations.length > 0 ? initialInspirations.join(", ") : "None selected",
+        }),
       });
 
       if (!response.ok) {

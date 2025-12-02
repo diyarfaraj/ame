@@ -48,24 +48,6 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body">
-        {/* Hidden form for Netlify Forms detection */}
-        <form name="consultation" netlify-honeypot="bot-field" data-netlify="true" hidden>
-          <input type="hidden" name="form-name" value="consultation" />
-          <input type="hidden" name="bot-field" />
-          <input type="text" name="name" />
-          <input type="email" name="email" />
-          <input type="tel" name="phone" />
-          <input type="text" name="projectType" />
-          <input type="text" name="spaceType" />
-          <input type="text" name="squareFootage" />
-          <input type="text" name="timeline" />
-          <input type="text" name="budgetRange" />
-          <input type="text" name="selectedPackage" />
-          <input type="text" name="stylePreferences" />
-          <textarea name="inspirations"></textarea>
-          <textarea name="message"></textarea>
-          <input type="text" name="selectedInspirationImages" />
-        </form>
         {children}
       </body>
     </html>

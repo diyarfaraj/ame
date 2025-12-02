@@ -1,7 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-import ProjectsGallery from "@/components/ProjectsGallery";
 
 export const metadata = {
   title: "Projects - Ame Interior Design",
@@ -14,7 +13,7 @@ export default function ProjectsPage() {
       <Navigation />
       <main className="min-h-screen">
         <HeroSection backgroundImage="/images/kitchen.png" />
-        <ProjectsGallery />
+       
         <Footer />
       </main>
     </>
