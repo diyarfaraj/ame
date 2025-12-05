@@ -59,15 +59,33 @@ export async function POST(request: Request) {
           ${selectedInspirationImages && selectedInspirationImages !== "None selected" ? `
           <div style="margin-bottom: 30px;">
             <h2 style="color: #78716c; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 15px;">Inspiration Images Selected</h2>
-            <ul style="margin: 0; padding-left: 20px;">
-              ${selectedInspirationImages.split(", ").map((img: string) => `
-                <li style="margin-bottom: 8px;">
-                  <a href="https://ame-studio.com/images/inspiration/${img}.png" style="color: #C4A484; text-decoration: none;">
-                    ${img.replace(/-/g, ' ')}
-                  </a>
-                </li>
-              `).join("")}
-            </ul>
+            <table cellpadding="0" cellspacing="0" border="0" style="width: 100%;">
+              ${selectedInspirationImages.split(", ").reduce((rows: string[], img: string, index: number) => {
+                if (index % 2 === 0) {
+                  rows.push(`<tr>`);
+                }
+                rows.push(`
+                  <td style="width: 50%; padding: 8px; vertical-align: top;">
+                    <a href="https://ame-studio.com/images/inspiration/${img}.png" style="display: block; text-decoration: none;">
+                      <img
+                        src="https://ame-studio.com/images/inspiration/${img}.png"
+                        alt="${img.replace(/-/g, ' ')}"
+                        width="250"
+                        style="width: 100%; max-width: 250px; height: auto; border-radius: 4px; display: block;"
+                      />
+                      <p style="color: #78716c; font-size: 11px; margin: 8px 0 0 0; text-align: center;">${img.replace(/-/g, ' ')}</p>
+                    </a>
+                  </td>
+                `);
+                if (index % 2 === 1 || index === selectedInspirationImages.split(", ").length - 1) {
+                  if (index % 2 === 0) {
+                    rows.push(`<td style="width: 50%;"></td>`);
+                  }
+                  rows.push(`</tr>`);
+                }
+                return rows;
+              }, []).join("")}
+            </table>
           </div>
           ` : ""}
 
