@@ -7,15 +7,15 @@ import { useRef } from "react";
 
 const projects = [
   {
-    title: "Wet Room",
+    title: "Desert Calm Living",
     image: "/images/project-1.png",
   },
   {
-    title: "Intimate Studio Living Area",
+    title: "Soft Horizon Bedroom",
     image: "/images/project-2.png",
   },
   {
-    title: "Loft Apartment",
+    title: "Quiet Luxury Dining",
     image: "/images/project-3.png",
   },
 ];
@@ -36,7 +36,7 @@ export default function ProjectsSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="font-heading text-4xl md:text-5xl lg:text-6xl font-normal text-stone-800 mb-16 md:mb-20"
           >
-            View our projects
+            Design directions we work with
           </motion.h2>
 
           {/* Projects Grid */}
