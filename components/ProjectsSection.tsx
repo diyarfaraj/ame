@@ -7,11 +7,11 @@ import { useRef } from "react";
 
 const projects = [
   {
-    title: "Desert Calm Living",
+    title: "Soft Horizon Bedroom",
     image: "/images/project-1.png",
   },
   {
-    title: "Soft Horizon Bedroom",
+    title: "Desert Calm Living",
     image: "/images/project-2.png",
   },
   {
