@@ -95,7 +95,7 @@ export async function POST(request: Request) {
     `;
 
     const { data, error } = await resend.emails.send({
-      from: "Amé Studio <onboarding@resend.dev>",
+      from: "Amé Studio <noreply@ame-studio.com>",
       to: [process.env.NOTIFICATION_EMAIL || "diyar.faraj@gmail.com"],
       replyTo: email,
       subject: `New Consultation Request from ${name}`,
