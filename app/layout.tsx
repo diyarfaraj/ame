@@ -206,6 +206,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-WJMW8CE6K9"
+          strategy="beforeInteractive"
+        />
+        <Script id="google-analytics" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-WJMW8CE6K9');
+          `}
+        </Script>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet" />
@@ -215,18 +227,6 @@ export default function RootLayout({
         />
       </head>
       <body className="font-body">
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-WJMW8CE6K9"
-          strategy="afterInteractive"
-        />
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-WJMW8CE6K9');
-          `}
-        </Script>
         {children}
       </body>
     </html>
