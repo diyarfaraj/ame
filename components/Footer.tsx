@@ -81,16 +81,32 @@ export default function Footer() {
             </a>
           </motion.div>
 
-          {/* Copyright */}
+          {/* Copyright & Legal Links */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
             className="mt-12 pt-8 border-t border-white/10"
           >
-            <p className="text-gray-500 text-sm">
-              Copyright Ame Studio 2025
-            </p>
+            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+              <p className="text-gray-500 text-sm">
+                Copyright Ame Studio 2025
+              </p>
+              <div className="flex items-center gap-6">
+                <Link
+                  href="/privacy-policy"
+                  className="text-gray-500 text-sm hover:text-white transition-colors duration-300"
+                >
+                  Privacy Policy
+                </Link>
+                <Link
+                  href="/terms-and-conditions"
+                  className="text-gray-500 text-sm hover:text-white transition-colors duration-300"
+                >
+                  Terms & Conditions
+                </Link>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

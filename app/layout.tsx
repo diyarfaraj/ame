@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
+import CookieConsent from "@/components/CookieConsent";
 
 export const metadata: Metadata = {
   title: {
@@ -253,6 +254,7 @@ export default function RootLayout({
       </head>
       <body className="font-body">
         {children}
+        <CookieConsent />
       </body>
     </html>
   );
