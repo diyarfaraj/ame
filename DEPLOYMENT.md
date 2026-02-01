@@ -155,22 +155,53 @@ import Script from 'next/script'
 
 ---
 
-## 🎯 Domain Setup
+## Domain & DNS Setup
 
-### Update Domain References
+### Current Configuration
 
-Change `https://ame-interiors.com` to your actual domain in:
-- `app/layout.tsx` (metadataBase)
-- `app/sitemap.ts`
-- `app/robots.ts`
+- **Domain**: `ame-studio.com` (registered with GoDaddy)
+- **Hosting**: Netlify (project: `ameee1`)
+- **DNS**: Managed by **Netlify DNS** (not GoDaddy)
+- **SSL**: Let's Encrypt (auto-provisioned by Netlify)
+- **Email**: Google Workspace (via MX records in Netlify DNS)
 
-### DNS Configuration
+### Nameservers
 
-**A Record:**
-- Point `@` to your server IP or Vercel IP
+The domain's nameservers are pointed to Netlify (configured in GoDaddy):
 
-**CNAME Record:**
-- Point `www` to your main domain
+```
+dns1.p08.nsone.net
+dns2.p08.nsone.net
+dns3.p08.nsone.net
+dns4.p08.nsone.net
+```
+
+Since Netlify controls DNS, **all DNS records must be managed in the Netlify dashboard**, not GoDaddy.
+
+### DNS Records (Netlify DNS)
+
+| Type | Name | Value | Purpose |
+|------|------|-------|---------|
+| A | @ | `75.2.60.5` | Points domain to Netlify |
+| MX | @ | `ASPMX.L.GOOGLE.COM` (priority 1) | Google Workspace email |
+| MX | @ | `ALT1.ASPMX.L.GOOGLE.COM` (priority 5) | Google Workspace email |
+| MX | @ | `ALT2.ASPMX.L.GOOGLE.COM` (priority 5) | Google Workspace email |
+| MX | @ | `ALT3.ASPMX.L.GOOGLE.COM` (priority 10) | Google Workspace email |
+| MX | @ | `ALT4.ASPMX.L.GOOGLE.COM` (priority 10) | Google Workspace email |
+| TXT | @ | `v=spf1 include:_spf.google.com ~all` | Email SPF record |
+
+### SSL Certificate
+
+- Issued by **Let's Encrypt** via Netlify
+- Covers `ame-studio.com` and `*.ame-studio.com`
+- Auto-renews as long as Netlify DNS nameservers remain active
+- If renewal fails, check that GoDaddy nameservers still point to Netlify
+
+### Important Notes
+
+- **Do not change nameservers in GoDaddy** back to default — this will break both the website SSL and email delivery.
+- **All DNS changes** (adding records, modifying MX, etc.) must be done in Netlify dashboard under Domain management > Netlify DNS.
+- GoDaddy is only used for domain registration and nameserver delegation. No DNS records are managed there.
 
 ---
 
