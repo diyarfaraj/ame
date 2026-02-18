@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import ProgressBar from "./ProgressBar";
 import WelcomeStep from "./steps/WelcomeStep";
@@ -9,7 +10,6 @@ import BudgetStep from "./steps/BudgetStep";
 import PackageStep from "./steps/PackageStep";
 import StyleStep from "./steps/StyleStep";
 import ContactStep from "./steps/ContactStep";
-import ThankYouStep from "./steps/ThankYouStep";
 
 export interface FormData {
   projectType: string;
@@ -81,12 +81,13 @@ interface FormContainerProps {
 }
 
 export default function FormContainer({ initialPackage = "", initialInspirations = [] }: FormContainerProps) {
+  const router = useRouter();
   const [currentStep, setCurrentStep] = useState(0);
   const [direction, setDirection] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState<FormData>(() => getInitialFormData(initialPackage));
 
-  const totalSteps = 7;
+  const totalSteps = 6;
 
   // Save form data to localStorage whenever it changes
   useEffect(() => {
@@ -146,12 +147,13 @@ export default function FormContainer({ initialPackage = "", initialInspirations
 
       // Clear localStorage after successful submission
       clearStorage();
-      nextStep();
+      // Redirect to thank you page for Meta Ads conversion tracking
+      router.push("/thank-you");
     } catch (error) {
       console.error("Error submitting form:", error);
-      // Clear storage and proceed to thank you page even if email fails
+      // Clear storage and redirect to thank you page even if email fails
       clearStorage();
-      nextStep();
+      router.push("/thank-you");
     } finally {
       setIsSubmitting(false);
     }
@@ -210,13 +212,12 @@ export default function FormContainer({ initialPackage = "", initialInspirations
       onBack={prevStep}
       isSubmitting={isSubmitting}
     />,
-    <ThankYouStep key="thankyou" formData={formData} />,
   ];
 
   return (
     <div className="min-h-screen bg-[#F5F3F0] relative overflow-hidden">
-      {currentStep < totalSteps - 1 && (
-        <ProgressBar currentStep={currentStep} totalSteps={totalSteps - 1} />
+      {currentStep < totalSteps && (
+        <ProgressBar currentStep={currentStep} totalSteps={totalSteps} />
       )}
 
       <AnimatePresence mode="wait" custom={direction}>
