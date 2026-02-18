@@ -190,6 +190,28 @@ Since Netlify controls DNS, **all DNS records must be managed in the Netlify das
 | MX | @ | `ALT4.ASPMX.L.GOOGLE.COM` (priority 10) | Google Workspace email |
 | TXT | @ | `v=spf1 include:_spf.google.com ~all` | Email SPF record |
 
+### Resend Email Service (for contact form)
+
+The contact form uses [Resend](https://resend.com) to send consultation requests to the inbox. The following DNS records must be added in **Netlify DNS** for Resend to work:
+
+| Type | Name | Value | Priority | Purpose |
+|------|------|-------|----------|---------|
+| TXT | `resend._domainkey` | *(copy from Resend dashboard)* | — | DKIM authentication |
+| MX | `send` | `feedback-smtp.us-east-1.amazonses.com` | 10 | Resend mail server |
+| TXT | `send` | `v=spf1 include:amazonses.com ~all` | — | SPF for Resend |
+
+**To verify:**
+1. Add all 3 records in Netlify DNS
+2. Go to [Resend Domains](https://resend.com/domains)
+3. Click "Restart" to re-verify
+4. Wait for status to show "Verified"
+
+**Environment variables required** (in `.env.local` and Netlify):
+```
+RESEND_API_KEY=re_xxxxxxxxxxxxx
+NOTIFICATION_EMAIL=info@ame-studio.com
+```
+
 ### SSL Certificate
 
 - Issued by **Let's Encrypt** via Netlify
