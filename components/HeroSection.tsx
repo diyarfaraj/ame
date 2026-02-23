@@ -71,7 +71,7 @@ export default function HeroSection({ backgroundImage = "/images/hero.png" }: He
             transition={{ duration: 0.8, delay: 0.3 }}
             className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-6 leading-tight"
           >
-            Design that feels like home
+            Complete Apartment Furnishing in 7–14 Days
           </motion.h1>
 
           <motion.p
@@ -80,7 +80,7 @@ export default function HeroSection({ backgroundImage = "/images/hero.png" }: He
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-white text-lg md:text-xl lg:text-2xl mb-16 md:mb-20 max-w-2xl mx-auto leading-relaxed"
           >
-            We create warm, modern, neutral interiors designed around you.
+            Fixed-price packages for studios, 1BR and 2BR apartments. Fully delivered and installed.
           </motion.p>
 
           <motion.div
@@ -92,7 +92,7 @@ export default function HeroSection({ backgroundImage = "/images/hero.png" }: He
               href="/packages"
               className="inline-block border border-white text-white hover:bg-white hover:text-stone-900 transition-all duration-300 px-10 py-4 text-sm tracking-widest uppercase"
             >
-              Get Started
+              Start a Custom Project
             </Link>
           </motion.div>
         </div>
