@@ -71,7 +71,7 @@ export default function HeroSection({ backgroundImage = "/images/hero.png" }: He
             transition={{ duration: 0.8, delay: 0.3 }}
             className="font-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white mb-6 leading-tight"
           >
-            Complete Apartment Furnishing in 7–14 Days
+            Luxury Interior Design & Turn-key Furnishing in Dubai
           </motion.h1>
 
           <motion.p
@@ -80,7 +80,7 @@ export default function HeroSection({ backgroundImage = "/images/hero.png" }: He
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-white text-lg md:text-xl lg:text-2xl mb-16 md:mb-20 max-w-2xl mx-auto leading-relaxed"
           >
-            Fixed-price packages for studios, 1BR and 2BR apartments. Fully delivered and installed.
+            Bespoke interiors for residents and investors. Fully furnished in 7–14 days.
           </motion.p>
 
           <motion.div
