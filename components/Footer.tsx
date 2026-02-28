@@ -41,16 +41,16 @@ export default function Footer() {
             className="text-center mb-20"
           >
             <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-normal mb-4">
-              Start your journey with amé.
+              Start your project with amé.
             </h2>
             <p className="text-gray-400 text-lg md:text-xl mb-12">
-              Tell us a little bit more...
+              Tell us about your property...
             </p>
             <Link
-              href="/packages"
+              href="/get-started"
               className="inline-flex items-center gap-3 bg-transparent border border-white/30 hover:bg-white hover:text-[#2C2C2C] transition-all duration-300 px-10 py-4 text-sm tracking-widest uppercase"
             >
-              GET STARTED
+              START YOUR PROJECT
             </Link>
           </motion.div>
 
@@ -134,7 +134,7 @@ export default function Footer() {
           >
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
               <p className="text-gray-500 text-sm">
-                Copyright Ame Studio 2025
+                Copyright Ame Studio 2026
               </p>
               <div className="flex items-center gap-6">
                 <Link

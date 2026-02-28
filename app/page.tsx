@@ -1,9 +1,10 @@
 import HeroSection from "@/components/HeroSection";
-import PhilosophySection from "@/components/PhilosophySection";
-import AboutSection from "@/components/AboutSection";
-import ProcessSection from "@/components/ProcessSection";
-import KitchenSection from "@/components/KitchenSection";
-import ProjectsSection from "@/components/ProjectsSection";
+import TrustBar from "@/components/TrustBar";
+import ProblemBlock from "@/components/ProblemBlock";
+import TestimonialsGrid from "@/components/TestimonialsGrid";
+import HomeProcessSection from "@/components/HomeProcessSection";
+import FAQSection from "@/components/FAQSection";
+import HomeAboutSection from "@/components/HomeAboutSection";
 import Footer from "@/components/Footer";
 import Navigation from "@/components/Navigation";
 
@@ -13,11 +14,12 @@ export default function Home() {
       <Navigation />
       <main className="min-h-screen">
         <HeroSection />
-        <PhilosophySection />
-        <AboutSection />
-        <ProcessSection />
-        <KitchenSection />
-        <ProjectsSection />
+        <TrustBar />
+        <ProblemBlock />
+        <TestimonialsGrid />
+        <HomeProcessSection />
+        <FAQSection />
+        <HomeAboutSection />
         <Footer />
       </main>
     </>
