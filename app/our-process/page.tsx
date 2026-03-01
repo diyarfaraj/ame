@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import HomeProcessSection from "@/components/HomeProcessSection";
 import TestimonialsGrid from "@/components/TestimonialsGrid";
+import GlobalClosingSection from "@/components/GlobalClosingSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -88,6 +89,7 @@ export default function OurProcessPage() {
         />
         <HomeProcessSection />
         <TestimonialsGrid />
+        <GlobalClosingSection />
         <Footer />
       </main>
     </>

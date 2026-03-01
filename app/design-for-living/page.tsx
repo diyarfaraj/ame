@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
+import GlobalClosingSection from "@/components/GlobalClosingSection";
 import Footer from "@/components/Footer";
 import BespokeContent from "./BespokeContent";
 
@@ -48,6 +49,7 @@ export default function DesignForLivingPage() {
           showButtons={false}
         />
         <BespokeContent />
+        <GlobalClosingSection />
         <Footer />
       </main>
     </>

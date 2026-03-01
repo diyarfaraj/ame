@@ -3,12 +3,13 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import PackagesGrid from "@/components/PackagesGrid";
 import TestimonialsGrid from "@/components/TestimonialsGrid";
+import GlobalClosingSection from "@/components/GlobalClosingSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Design for Investment - Turn-key Holiday Home Furnishing Dubai",
   description:
-    "Turn-key furniture packages for Dubai holiday homes and investment properties. Fixed-price guarantee, guest-ready in 14 days. Packages from AED 71,600.",
+    "Turn-key furniture packages for Dubai holiday homes and investment properties. Fixed-price guarantee, guest-ready in 14 days. Request a quote via WhatsApp.",
   keywords: [
     "holiday home furnishing Dubai",
     "investment property furniture",
@@ -43,13 +44,14 @@ export default function DesignForInvestmentPage() {
       <Navigation />
       <main className="min-h-screen">
         <HeroSection
-          backgroundImage="/images/hero.png"
+          backgroundImage="/images/new-hero.jpeg"
           title="Turn-key furnishing for investment properties."
           subtitle="Fixed-price packages designed to maximize your rental yield. Guest-ready in 14 days."
           showButtons={false}
         />
         <PackagesGrid />
         <TestimonialsGrid />
+        <GlobalClosingSection />
         <Footer />
       </main>
     </>

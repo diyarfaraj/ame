@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Navigation from "@/components/Navigation";
 import FAQSection from "@/components/FAQSection";
+import GlobalClosingSection from "@/components/GlobalClosingSection";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
@@ -99,6 +100,7 @@ export default function FAQPage() {
       <Navigation />
       <main className="min-h-screen pt-24 md:pt-32">
         <FAQSection />
+        <GlobalClosingSection />
         <Footer />
       </main>
     </>
