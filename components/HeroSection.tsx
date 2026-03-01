@@ -12,7 +12,7 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({
-  backgroundImage = "/images/new-hero.jpeg",
+  backgroundImage = "/images/hero.png",
   title = "Holiday home furnishing in Dubai \u2014 guest-ready in 14 days.",
   subtitle = "One fixed price. One point of contact. Ready to list and earn.",
   showButtons = true,
