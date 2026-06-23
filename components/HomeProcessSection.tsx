@@ -72,12 +72,14 @@ export default function HomeProcessSection() {
               transition={{ duration: 0.6, delay: 0.2 + index * 0.12, ease: "easeOut" }}
               className="text-center"
             >
-              <div className="flex justify-center mb-4 text-white/60">
-                {step.icon}
+              <div className="flex items-center justify-center gap-3 md:flex-col mb-4">
+                <p className="text-[#C4A484] text-sm tracking-widest uppercase md:order-2 md:mb-0">
+                  {step.number}
+                </p>
+                <div className="text-white/60 md:order-1">
+                  {step.icon}
+                </div>
               </div>
-              <p className="text-[#C4A484] text-sm tracking-widest uppercase mb-2">
-                {step.number}
-              </p>
               <h3 className="font-heading text-xl md:text-2xl font-normal text-white mb-3">
                 {step.title}
               </h3>
